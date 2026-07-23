@@ -15,7 +15,7 @@ form.addEventListener('submit', (event) => {
   const data = new FormData(form);
   const message = `您好，我想預約 Good Mood Studio！\n\n服務：${data.get('service')}\n稱呼：${data.get('name')}\n聯絡方式：${data.get('contact')}\n希望日期：${data.get('date')}\n偏好時段：${data.get('time')}\n備註：${data.get('note') || '無'}`;
   navigator.clipboard?.writeText(message);
-  window.open('https://www.instagram.com/good_mood_beautystudio/', '_blank', 'noopener,noreferrer');
+  window.open('https://ig.me/m/good_mood_beautystudio', '_blank', 'noopener,noreferrer');
   const hint = form.querySelector('.form-hint');
   hint.textContent = '預約資訊已複製，Instagram 已開啟；請將內容貼到私訊中送出。';
 });
